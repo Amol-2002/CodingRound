@@ -47,25 +47,30 @@ fun HomeScreen(navController: NavHostController) {
         LazyColumn(
             modifier = Modifier.padding(innerPadding)
         ) {
-            items(posts) {post ->
-                Card(modifier = Modifier
-                    .padding(horizontal = 12.dp, vertical = 8.dp)
-                    .fillMaxSize()) {
-                    Row(modifier = Modifier.padding(8.dp), horizontalArrangement = Arrangement.Center,
-                        verticalAlignment = Alignment.CenterVertically){
+            items(posts) { post ->
+                Card(
+                    modifier = Modifier
+                        .padding(horizontal = 12.dp, vertical = 8.dp)
+                        .fillMaxSize()
+                ) {
+                    Row(
+                        modifier = Modifier.padding(8.dp),
+                        horizontalArrangement = Arrangement.Center,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
                         AsyncImage(
                             model = post.image,
                             contentDescription = "user",
                             modifier = Modifier.size(70.dp)
                         )
 
-                        Column (modifier = Modifier.padding(8.dp)){
+                        Column(modifier = Modifier.padding(8.dp)) {
                             Text(post.id.toString())
                             Text("${post.firstName} ${post.maidenName} ${post.lastName}")
                             Text(post.birthDate)
                         }
                     }
-            }
+                }
             }
         }
     }

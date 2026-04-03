@@ -74,15 +74,17 @@ fun Login(navController: NavHostController) {
 
         Spacer(modifier = Modifier.height(30.dp))
 
-        Button(onClick = {
-            navController.navigate(NavRoutes.home){
-popUpTo(NavRoutes.login){inclusive = true}
-            }
-        },
+        Button(
+            onClick = {
+                navController.navigate(NavRoutes.home) {
+                    popUpTo(NavRoutes.login) { inclusive = true }
+                }
+            },
             enabled = isButtonEnabled,
             modifier = Modifier.fillMaxWidth(),
             colors = ButtonDefaults.buttonColors(
-            containerColor = Color.Black),
+                containerColor = Color.Black
+            ),
             shape = RoundedCornerShape(8.dp)
 
         ) {

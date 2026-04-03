@@ -26,9 +26,7 @@ fun NavGraph() {
         }
         composable<NavRoutes.home> {
             HomeScreen(navController)
-
         }
-
         composable<NavRoutes.topbar> {
             TopAppBar(navController)
         }
