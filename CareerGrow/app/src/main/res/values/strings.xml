@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Trifrnd</string>
+    <string name="title_activity_splash">SplashActivity</string>
+</resources>
